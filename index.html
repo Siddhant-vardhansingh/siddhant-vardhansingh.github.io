@@ -3,83 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suryansh Website</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <script>
-    const toggleLinks = document.querySelectorAll(".toggle-link");
-    const loginForm = document.querySelector(".form.login");
-    const signupForm = document.querySelector(".form.signup");
-
-    toggleLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        loginForm.classList.toggle("active");
-        signupForm.classList.toggle("active");
-      });
-    });
-
-    // Show login form by default
-    loginForm.classList.add("active");
-  </script>
   <body>
-    <div class="container">
-      <div class="form-container">
-        <!-- Login Form -->
-        <div class="form login">
-          <h2>Login</h2>
-          <form action="/login" method="POST">
-            <div class="input-group">
-              <label for="login-email">Email</label>
-              <input type="email" id="login-email" name="email" required />
-            </div>
-            <div class="input-group">
-              <label for="login-password">Password</label>
-              <input
-                type="password"
-                id="login-password"
-                name="password"
-                required
-              />
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <p>
-              Don't have an account?
-              <a href="#signup" class="toggle-link">Sign Up</a>
-            </p>
-          </form>
-        </div>
+    <header>
+      <div class="container">
+        <h1>My Portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <!-- Signup Form -->
-        <div class="form signup">
-          <h2>Sign Up</h2>
-          <form action="/signup" method="POST">
-            <div class="input-group">
-              <label for="signup-name">Name</label>
-              <input type="text" id="signup-name" name="name" required />
-            </div>
-            <div class="input-group">
-              <label for="signup-email">Email</label>
-              <input type="email" id="signup-email" name="email" required />
-            </div>
-            <div class="input-group">
-              <label for="signup-password">Password</label>
-              <input
-                type="password"
-                id="signup-password"
-                name="password"
-                required
-              />
-            </div>
-            <button type="submit" class="btn">Sign Up</button>
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm an aspiring backend developer with expertise in QA
+          Automation and a passion for building efficient and scalable systems.
+          I enjoy solving complex problems and learning new technologies.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>Project 1</h3>
             <p>
-              Already have an account?
-              <a href="#login" class="toggle-link">Login</a>
+              Description of the project. Showcase what you achieved and
+              technologies used.
             </p>
-          </form>
+          </div>
+          <div class="project-card">
+            <h3>Project 2</h3>
+            <p>
+              Description of the project. Showcase what you achieved and
+              technologies used.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Project 3</h3>
+            <p>
+              Description of the project. Showcase what you achieved and
+              technologies used.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
